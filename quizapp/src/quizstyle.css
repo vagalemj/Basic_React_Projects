@@ -27,13 +27,13 @@ body {
     margin-bottom: 25px;
     text-transform: uppercase;
     letter-spacing: 1.5px;
-    width: 100%; /* Ensures it takes full width of the container */
-    height: 100px; /* Fixed height for the question box */
+    width: 100%;
+    height: 100px; 
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-    overflow: hidden; /* Ensures no overflow for longer text */
+    overflow: hidden; 
 }
 
 .quiz ul {
