@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Shopping from "./Shopping";
+import './styles.css';
+
 
 export default function Login({ user }) {
     const [click, setClick] = useState(false);

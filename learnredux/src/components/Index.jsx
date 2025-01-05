@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import Login from './Login';
+import './styles.css';
+
 
 export default function Index() {
     const user = {

@@ -1,5 +1,5 @@
-import React, {useState} from 'react';
-import {data} from './data';
+import React, { useState, useEffect } from 'react';
+import { data } from './data';
 import './quizstyle.css';
 
 export default function Quizapp() {
@@ -8,20 +8,30 @@ export default function Quizapp() {
     const [score, setScore] = useState(0);
     const [started, setStarted] = useState(false);
     const [finished, setFinish] = useState(false);
-    const correctAnswers = ['Option3', 'Option4', 'Option2', 'Option1', 
-        'Option1', 'Option4', 'Option3', 'Option3', 'Option4', 'Option2'];
+    const [shuffledData, setShuffledData] = useState([]);
+
+    useEffect(() => {
+        const combinedData = data.map((question, idx) => ({
+            ...question,
+            correctAnswer: ['Option3', 'Option4', 'Option2', 'Option1',
+                'Option1', 'Option4', 'Option3', 'Option3', 'Option4', 'Option2'][idx],
+        }));
+
+        const shuffled = combinedData.sort(() => Math.random() - 0.5);
+        setShuffledData(shuffled);
+    }, []);
 
     const handleNext = () => {
-        if (correctAnswers[index] === option) {
+        if (shuffledData[index].correctAnswer === option) {
             setScore(score + 1);
         }
-        if (index < data.length - 1) {
+        if (index < shuffledData.length - 1) {
             setIndex(index + 1);
             setOption(null);
         } else {
             setFinish(true);
         }
-    }; 
+    };
 
     if (!started) {
         return (
@@ -32,8 +42,8 @@ export default function Quizapp() {
             </div>
         );
     }
-       
-    if(finished) {
+
+    if (finished) {
         return (
             <div className='scorePage'>
                 <h1>Quiz Finished!</h1>
@@ -47,18 +57,41 @@ export default function Quizapp() {
     const handleSelect = (optn) => {
         setOption(optn);
     }
-    
+    if (shuffledData.length === 0) return null;
+
+
     return (
-        <div className='quiz'>  
-        <h1>{data[index].Question}</h1>
-        <ul>
-            <li className={option === 'Option1'?'selected':''} onClick={() => handleSelect('Option1')}>{data[index].Option1}</li>
-            <li className={option === 'Option2'?'selected':''} onClick={() => handleSelect('Option2')}>{data[index].Option2}</li>
-            <li className={option === 'Option3'?'selected':''} onClick={() => handleSelect('Option3')}>{data[index].Option3}</li>
-            <li className={option === 'Option4'?'selected':''} onClick={() => handleSelect('Option4')}>{data[index].Option4}</li>
-        </ul>
-        <button onClick={handleNext} disabled={!option}>Next</button>
-        <h5>Question {index+1} of {data.length}</h5>
+        <div className="quiz">
+            <h1>{shuffledData[index].Question}</h1>
+            <ul>
+                <li
+                    className={option === 'Option1' ? 'selected' : ''}
+                    onClick={() => handleSelect('Option1')}
+                >
+                    {shuffledData[index].Option1}
+                </li>
+                <li
+                    className={option === 'Option2' ? 'selected' : ''}
+                    onClick={() => handleSelect('Option2')}
+                >
+                    {shuffledData[index].Option2}
+                </li>
+                <li
+                    className={option === 'Option3' ? 'selected' : ''}
+                    onClick={() => handleSelect('Option3')}
+                >
+                    {shuffledData[index].Option3}
+                </li>
+                <li
+                    className={option === 'Option4' ? 'selected' : ''}
+                    onClick={() => handleSelect('Option4')}
+                >
+                    {shuffledData[index].Option4}
+                </li>
+            </ul>
+            <button onClick={handleNext} disabled={!option}>Next</button>
+            <h5>Question {index + 1} of {shuffledData.length}</h5>
         </div>
     );
+
 }
