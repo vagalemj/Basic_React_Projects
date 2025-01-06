@@ -30,7 +30,7 @@ Welcome to the **Quiz App** – a fun and interactive platform to test your know
 
 1. 🔧 **Clone the repository**  
    ```bash
-   git clone https://github.com/your-username/quiz-app.git
+   git clone https://github.com/vagalemj/quiz-app.git
    cd quiz-app
    ```
 
