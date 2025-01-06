@@ -68,13 +68,13 @@ Welcome to the **Quiz App** – a fun and interactive platform to test your know
 ## 🖼️ **App Preview**
 
 > **Home Screen**  
-![Home Screen] (image.png)
+![Home Screen] (./images/image.png)
 
 > **Quiz Screen**  
-![Quiz Screen] (image-1.png)
+![Quiz Screen] (./images/image-1.png)
 
 > **Result Screen**  
-![Result Screen] (image-2.png)
+![Result Screen] (./images/image-2.png)
 
 ---
 
