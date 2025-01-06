@@ -68,13 +68,13 @@ Welcome to the **Quiz App** – a fun and interactive platform to test your know
 ## 🖼️ **App Preview**
 
 > **Home Screen**  
-![Home Screen] (https://github.com/vagalemj/Basic_React_Projects/blob/main/quizapp/images/image.png)
+![Home Screen](https://raw.githubusercontent.com/vagalemj/Basic_React_Projects/main/quizapp/images/image.png)
 
 > **Quiz Screen**  
-![Quiz Screen] (https://github.com/vagalemj/Basic_React_Projects/blob/main/quizapp/images/image-1.png)
+![Quiz Screen](https://raw.githubusercontent.com/vagalemj/Basic_React_Projects/main/quizapp/images/image-1.png)
 
 > **Result Screen**  
-![Result Screen] (https://github.com/vagalemj/Basic_React_Projects/blob/main/quizapp/images/image-2.png)
+![Result Screen](https://raw.githubusercontent.com/vagalemj/Basic_React_Projects/main/quizapp/images/image-2.png)
 
 ---
 
