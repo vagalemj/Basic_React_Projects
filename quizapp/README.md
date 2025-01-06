@@ -1,7 +1,3 @@
-
-
-Here's a creatively styled `README.md` for your Quiz App project: 
-
 ---
 
 # 🎉 **Quiz App** 🎉
@@ -124,5 +120,3 @@ If you liked the Quiz App, don't forget to ⭐ the repository!
 Enjoy the app and happy quizzing! 🎉🧠✨
 
 --- 
-
-You can add relevant screenshots under **App Preview** and modify links accordingly.
