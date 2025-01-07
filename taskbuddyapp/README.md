@@ -77,10 +77,12 @@ Welcome to **PlanStack** – a smart and interactive task management app designe
 ![Home Screen](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image.png)
 
 > **Task List Screen**  
-![Task List Screen](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-1.png)(https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-2.png)
+![Task List Screen1](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-1.png)
+![Task List Screen2](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-2.png)
 
 > **Progress Tracker**  
-![Progress Tracker](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-3.png)(https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-4.png)
+![Progress Tracker1](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-3.png)
+![Progress Tracker2](https://github.com/vagalemj/Basic_React_Projects/blob/main/taskbuddyapp/src/Screenshots/image-4.png)
 
 ---
 
