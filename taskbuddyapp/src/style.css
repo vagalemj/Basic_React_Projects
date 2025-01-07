@@ -1,0 +1,334 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Body */
+body {
+    background: linear-gradient(135deg, #36d1dc, #5b86e5);
+    /* New Gradient Background */
+    color: #333;
+    font-size: 16px;
+    line-height: 1.5;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode {
+    background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    /* Dark mode gradient */
+    color: #ddd;
+}
+
+/* Header */
+.header {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    /* Gradient header */
+    color: white;
+    padding: 1.5rem 0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    position: relative;
+    transition: background 0.3s ease;
+}
+
+body.dark-mode .header {
+    background: linear-gradient(135deg, #3c2a7b, #1820b6);
+}
+
+.header-container {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+.highlight {
+    color: #ff8c00;
+}
+
+.tagline {
+    font-size: 1.2rem;
+    margin-top: 0.5rem;
+    font-weight: 300;
+}
+
+/* App Container */
+.App {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+/* Task Form */
+.task-form {
+    background: rgba(255, 255, 255, 0.8);
+    /* Glassmorphism effect */
+    backdrop-filter: blur(15px);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-form:hover {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+#inp {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+input {
+    width: 70%;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 12px rgba(37, 117, 252, 0.6);
+    outline: none;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    transform: translateY(-3px);
+}
+
+/* Buttons and Select */
+.btns {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+select {
+    padding: 0.8rem;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    background-color: #f9f9f9;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 12px rgba(37, 117, 252, 0.6);
+}
+
+/* Task List */
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 2rem;
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+.task-list li {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem;
+    align-items: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.task-list li:hover {
+    transform: translateY(-5px);
+    background-color: #f1f1f1;
+}
+
+.task-list li.completed {
+    background-color: #b9f6ca;
+    text-decoration: line-through;
+    animation: taskComplete 0.5s ease-in-out;
+}
+
+.task-list li span {
+    font-size: 1.1rem;
+    font-weight: 500;
+}
+
+.task-list li small {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+button {
+    background-color: #f44336;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #e53935;
+}
+
+/* Progress Tracker */
+.progress-tracker {
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(15px);
+    /* Glassmorphism effect */
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    margin-top: 2rem;
+}
+
+.progress-bar {
+    width: 100%;
+    height: 10px;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
+.progress {
+    height: 100%;
+    background-color: #2575fc;
+    border-radius: 10px;
+    transition: width 0.3s ease-in-out;
+}
+
+/* Clear Button */
+.clear-btn {
+    background: linear-gradient(135deg, #ff5722, #f44336);
+    color: white;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    margin-top: 2rem;
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.clear-btn:hover {
+    background: linear-gradient(135deg, #f44336, #ff5722);
+    transform: scale(1.05);
+}
+
+/* Floating Action Button (FAB) */
+.fab {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #2575fc, #6a11cb);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.fab:hover {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+}
+
+/* Dark Mode Toggle */
+.dark-mode-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: linear-gradient(135deg, #ffeb3b, #fbc02d);
+    padding: 0.8rem 1rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.dark-mode-toggle:hover {
+    background: linear-gradient(135deg, #fbc02d, #ffeb3b);
+}
+
+/* Smooth Scroll */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes taskComplete {
+    0% {
+        background-color: #b9f6ca;
+    }
+
+    50% {
+        background-color: #a4e79f;
+    }
+
+    100% {
+        background-color: #b9f6ca;
+    }
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    .App {
+        padding: 1.5rem;
+    }
+
+    .task-form {
+        padding: 1.5rem;
+    }
+
+    .header .title {
+        font-size: 2rem;
+    }
+
+    .task-form input {
+        width: 60%;
+    }
+
+    .task-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
